@@ -496,7 +496,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d64b8a028aa40a8408e64588600969f1, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 1457836131}
   - component: {fileID: 1457836133}
   - component: {fileID: 1457836132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -1022,7 +1022,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649246177}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1045,10 +1045,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.39157772, y: 0.12520885}
+  m_Offset: {x: -0.39157772, y: 0.11706495}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1059,7 +1059,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7560663, y: 0.043279648}
+  m_Size: {x: 0.7560663, y: 0.05956745}
   m_EdgeRadius: 0
 --- !u!114 &1649246181
 MonoBehaviour:
@@ -1193,7 +1193,7 @@ GameObject:
   - component: {fileID: 2068439254}
   - component: {fileID: 2068439256}
   - component: {fileID: 2068439255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sand
   m_TagString: Platform
   m_Icon: {fileID: 0}
