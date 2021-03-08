@@ -46,11 +46,11 @@ public class Player1 : MonoBehaviour
         float moveDir = 0.0f;
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            moveDir -= 1.0f;
+            moveDir -= 2.0f;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            moveDir += 1.0f;
+            moveDir += 2.0f;
         }
 
         if (foot.FootContact > 0 && jumpButtonDown_)
