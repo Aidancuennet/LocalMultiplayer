@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Player1 : MonoBehaviour
+public class Player2 : MonoBehaviour
 {
     public enum State
     {
@@ -25,7 +25,7 @@ public class Player1 : MonoBehaviour
     private const float MoveSpeed = 2.0f;
     private const float JumpSpeed = 5.0f;
 
-    private bool facingRight_ = true;
+    private bool facingLeft_ = true;
     private bool jumpButtonDown_ = false;
 
     void Start()
@@ -35,7 +35,7 @@ public class Player1 : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             jumpButtonDown_ = true;
         }
@@ -45,11 +45,11 @@ public class Player1 : MonoBehaviour
     void FixedUpdate()
     {
         float moveDir = 0.0f;
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             moveDir -= 2.0f;
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             moveDir += 2.0f;
         }
@@ -63,12 +63,12 @@ public class Player1 : MonoBehaviour
         var vel = body.velocity;
         body.velocity = new Vector2(MoveSpeed * moveDir, vel.y);
         //We flip the characters when not facing in the right direction
-        if (moveDir > DeadZone && !facingRight_)
+        if (moveDir > DeadZone && !facingLeft_)
         {
             Flip();
         }
 
-        if (moveDir < -DeadZone && facingRight_)
+        if (moveDir < -DeadZone && facingLeft_)
         {
             Flip();
         }
@@ -136,6 +136,6 @@ public class Player1 : MonoBehaviour
     void Flip()
     {
         spriteRenderer.flipX = !spriteRenderer.flipX;
-        facingRight_ = !facingRight_;
+        facingLeft_ = !facingLeft_;
     }
 }
